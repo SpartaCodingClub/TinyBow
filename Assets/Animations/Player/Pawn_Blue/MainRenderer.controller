@@ -119,7 +119,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5381232269884401138}
@@ -199,20 +199,20 @@ AnimatorController:
   m_Name: MainRenderer
   serializedVersion: 5
   m_AnimatorParameters:
+  - m_Name: IsAttack
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   - m_Name: IsCollect
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IsRun
+  - m_Name: IsMove
     m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: IsAttack
-    m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -242,7 +242,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7476583740223407125}
@@ -295,7 +295,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7476583740223407125}
@@ -400,7 +400,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1663547575554141000}
@@ -571,7 +571,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4055105477990353610}
@@ -599,7 +599,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsCollect
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsRun
+    m_ConditionEvent: IsMove
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4055105477990353610}
