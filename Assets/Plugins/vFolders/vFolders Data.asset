@@ -22,17 +22,17 @@ MonoBehaviour:
     - iconNameOrGuid: 
       colorIndex: 2
       isIconRecursive: 0
-      isColorRecursive: 0
+      isColorRecursive: 1
     - iconNameOrGuid: 
       colorIndex: 8
       isIconRecursive: 0
-      isColorRecursive: 0
+      isColorRecursive: 1
     - iconNameOrGuid: 
       colorIndex: 7
       isIconRecursive: 0
-      isColorRecursive: 0
+      isColorRecursive: 1
     - iconNameOrGuid: 
       colorIndex: 6
       isIconRecursive: 0
-      isColorRecursive: 0
+      isColorRecursive: 1
   bookmarks: []

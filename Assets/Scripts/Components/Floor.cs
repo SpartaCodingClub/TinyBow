@@ -4,12 +4,14 @@ using UnityEngine.Tilemaps;
 
 public class Floor : MonoBehaviour
 {
+    #region Inspector
     [Header("Required")]
     [SerializeField] private GameObject targetObject;
 
     [Header("Optional")]
     [SerializeField] private TilemapRenderer foreground;
     [SerializeField] private TilemapRenderer background;
+    #endregion
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
