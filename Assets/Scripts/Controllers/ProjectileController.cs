@@ -18,6 +18,11 @@ public class ProjectileController : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (duration == 0f)
+        {
+            return;
+        }
+
         reservedTween = DOVirtual.DelayedCall(duration, () =>
         {
             spriteRenderer.DOFade(0.0f, 1.0f).OnComplete(() => Destroy(gameObject));
@@ -31,6 +36,11 @@ public class ProjectileController : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (duration == 0f)
+        {
+            return;
+        }
+
         spriteRenderer.DOKill();
         reservedTween.Kill();
     }
@@ -39,7 +49,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (target.value == (target.value | (1 << collision.gameObject.layer)))
         {
-            Destroy(gameObject);
+            spriteRenderer.DOFade(0.0f, 0.1f).OnComplete(() => Destroy(gameObject));
             OnDamage?.Invoke();
         }
     }

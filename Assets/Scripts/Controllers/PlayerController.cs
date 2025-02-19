@@ -77,6 +77,8 @@ public class PlayerController : BaseController
                 base.Move();
                 break;
             case GameMode.MiniGame:
+                if (Managers.Game.CurrentState != GameState.Start) break;
+                animationHandler.Move(Vector2.right);
                 break;
         }
     }
@@ -117,11 +119,15 @@ public class PlayerController : BaseController
         switch (gameMode)
         {
             case GameMode.MainGame:
+                _rigidbody.gravityScale = 0f;
+                _rigidbody.velocity = Vector2.zero;
+                animationHandler.Idle();
+                moveDirection = Vector2.zero;
                 break;
             case GameMode.MiniGame:
                 _rigidbody.velocity = Vector2.zero;
                 _mainRenderer.flipX = false;
-                animationHandler.Move(Vector2.right);
+                animationHandler.Idle();
                 break;
         }
 

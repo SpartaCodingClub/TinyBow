@@ -16,10 +16,8 @@ public class BigClouds : MonoBehaviour, ICloud
 
     private void Update()
     {
-        float x = Mathf.Repeat(Speed * 0.1f * Time.time, 1f);
-        Vector2 offset = new(x, 0);
-
-        top.SetTextureOffset(Define.MainTex, offset);
-        bottom.SetTextureOffset(Define.MainTex, offset);
+        Vector2 offset = new(Speed * 0.05f * Time.deltaTime, 0);
+        top.mainTextureOffset += offset;
+        bottom.mainTextureOffset += offset;
     }
 }

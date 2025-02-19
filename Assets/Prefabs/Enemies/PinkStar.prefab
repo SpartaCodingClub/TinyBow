@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6772097894346131499}
   - component: {fileID: 4303943907982937031}
   - component: {fileID: 5225858698561496417}
+  - component: {fileID: 2953739628013804824}
   m_Layer: 7
   m_Name: PinkStar
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1797762639
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 213f719ab90c7a0438f113eec36049b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,6 +140,23 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.55, y: 0.45}
+  m_Offset: {x: 0.75, y: 0.6}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 1
+--- !u!114 &2953739628013804824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206030853731820249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcde67f8c1fe93846bca70a1b46e8cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+    serializedVersion: 2
+    m_Bits: 8
+  speed: 0
+  duration: 0

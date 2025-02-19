@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Rect spawnArea;
     #endregion
 
-    public static readonly float Width = 15f;
+    public static readonly float Width = 14f;
 
     public float Speed { get { return speed; } set { speed = value; } }
 
@@ -25,15 +25,15 @@ public class Spawner : MonoBehaviour
         seconds = new(delay);
     }
 
-    private void Start()
-    {
-        StartCoroutine(Spawning());
-    }
-
     private void Update()
     {
         foreach (var item in objectPool)
         {
+            if (item == null)
+            {
+                continue;
+            }
+
             if (item.activeSelf == false)
             {
                 continue;
@@ -52,7 +52,7 @@ public class Spawner : MonoBehaviour
     {
         GameObject gameObject;
 
-        var pool = objectPool.Where(x => x.activeSelf == false).ToArray();
+        var pool = objectPool.Where(x => x != null && x.activeSelf == false).ToArray();
         if (pool.Length > 0)
         {
             gameObject = pool[0];
@@ -69,6 +69,22 @@ public class Spawner : MonoBehaviour
         gameObject.transform.position = new(x, y);
 
         return gameObject;
+    }
+
+    public void StartSpawning()
+    {
+        StartCoroutine(Spawning());
+    }
+
+    public void Clear()
+    {
+        foreach (var item in objectPool)
+        {
+            item.SetActive(false);
+        }
+
+        StopAllCoroutines();
+        objectPool.Clear();
     }
 
     private IEnumerator Spawning()
